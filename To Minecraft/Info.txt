@@ -1,19 +1,19 @@
-Another application for LiDAR data is in its educational value.
+Another application for LiDAR data is its educational value.
 
 These inductions assume that you have already read the guide on how to get stl info from data.
 
 Instructions:
 
-1. Make sure your stl is below 25 Mb, if not- subdivide it into mutiple stl files.
+1. Make sure your stl is below 25 Mb, if not- subdivide it into multiple stl files.
 
 2. Create a free account on the website "tinkercad" https://www.tinkercad.com
 
-3. Creat a new project
+3. Create a new project
 
 4. Press "import" on the top right of the screen, drag and drop the folder. Keep scale value at 100, increasing the value can remove surface detail.
 
-5. Once the model has been imported, scale it. The larger the scale more more detail it will have and the larger the area it will cover once exported.
+5. Once the model has been imported, scale it. The larger the scale, the more detail it will have and the larger the area it will cover once exported.
 
 6. Select the pickaxe on the top right corner of the screen and select a detail level on the left side.
 
-7. Once satisifed, press "export" on the top right corner of the screen. This will output a .SCHEMATIC file which will work with most versions of worldedit.
+7. Once satisfied, press "export" on the top right corner of the screen. This will output a .SCHEMATIC file which will work with most versions of worldedit.
