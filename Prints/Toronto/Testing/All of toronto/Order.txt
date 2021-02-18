@@ -1,0 +1,4 @@
+How to lay out prints
+00 01
+10 11
+20 21
