@@ -1,0 +1,51 @@
+Included are the steps I took to create 3D prints from areas across Ontario. I am not a professional, my methods are not perfect but work for simple stl outputs.
+
+In this repo, I've included almost all of my outputs for inspiration and as examples. Prints in folders labelled "testing" have not been optimized and might not properly display surface data.
+
+Instructions:
+
+1. Download a dataset from your datasource of choice, OntarioGeoHub has a wide range of examples https://geohub.lio.gov.on.ca/ If you want a full surface overview, aim to find a "Digital Surface Model" .DSM or "Digital Elevation Model" .DEM filetype. If you are instead in terrain alone, use "Digital Terrain Model" .DTM files. File types such as .las or .lem include more steps that I will not cover here.
+
+2. Download the free software QGIS https://www.qgis.org/en/site/
+
+3. Open QGIS go to Plugins > manage and install plugins > search "DEMto3D" > install. Once complete, restart QGIS
+
+4. Reopen QGIS (optional) uncheck the "render" checkbox at the bottom right corner if your computer runs slow or lacks memory.
+
+5. Drag and drop your zipped data folder into QGIS, click ok to all prompts. This process can take multiple minutes, do not click the QGIS program- it will stop responding.
+
+6. Once your files have loaded in, save your project.
+
+7. Go to Raster > miscellaneous > merge
+
+8. Under "Input Layers" click the 3 dots, press "select all", this may take a minute. Once done, press "ok"
+
+9. Under "Merged" click the 3 dots, press save to file. Select a drive that has at least 10-40 Gb of extra storage. Select file type as .tif, name your file and press save. This will take several minutes, do not touch the process.
+
+10. Once complete, you can close the merge window.
+
+11. On the left side of your screen under "layers" there should be a list of all imported files. At the top or bottom will be the file you created. Select all files except the one you created, right-click and press "remove layers" this will take some time.
+
+Repeat from step 5 for every dataset, individual .tifs can be merged in the same method as listed above.
+
+12. Rendering is much lighter, it should be safe to turn back on at this point. If after 30 seconds you don't see anything, right-click your 1 remaining file and press "zoom to layer"
+
+12.a Your map is now ready to be printed. Go to raster > DEMto3D this opens your 3d printing menu.
+	
+12.b Make sure your files are selected under "layer to print"
+
+12.c Under "print extent" you can either select the whole map using the leftmost box in the group of 3 or you can drag to select an area using the rightmost. Selecting a large area will take a while, do not touch the program while it is selecting.
+
+12.d Select a desired resolution under "spacing", note that decreasing this value (i.e from 0.2 > 0.1) increases the resolution and filesize eightfold. Values in the range of 0.5-0.2 are good for large areas or strictly terrain-based prints. 0.2-0.1 works well for urban areas. Going below 0.05 causes extreme exponential filesize growth making stl files useless in most applications.
+
+12.e Select desired size or scale.
+
+12.f Choose a vertical stretch to help emphasize depth, I suggest 1.5x-2.5x although this can be tuned to your liking before printing.
+
+12.g If you would like to print in multiple pieces you can choose to subdivide your model, this is also useful when your filesize approaches slicer limits (~300 Mb)
+
+12.h Most data is pre-elevated, unless you have issues with base thickness, under "model height" set the height to 0.
+
+12.j Click export as stl, do not rename the file while selecting a location or it will not export properly.
+
+13. You will now have an stl of your selected area, use it in your slicer of choice.
