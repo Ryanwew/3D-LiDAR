@@ -4,7 +4,7 @@ In this repo, I've included almost all of my outputs for inspiration and as exam
 
 Instructions:
 
-1. Download a dataset from your datasource of choice, OntarioGeoHub has a wide range of examples https://geohub.lio.gov.on.ca/ If you want a full surface overview, aim to find a "Digital Surface Model" .DSM or "Digital Elevation Model" .DEM filetype. If you are instead in terrain alone, use "Digital Terrain Model" .DTM files. File types such as .las or .lem include more steps that I will not cover here.
+1. Download a dataset from your datasource of choice, OntarioGeoHub has a wide range of examples https://geohub.lio.gov.on.ca/ If you want a full surface overview, aim to find a "Digital Surface Model" .DSM or "Digital Elevation Model" .DEM filetype. If you are interested in terrain alone, use "Digital Terrain Model" .DTM files. File types such as .las or .lem include more steps that I will not cover here.
 
 2. Download the free software QGIS https://www.qgis.org/en/site/
 
@@ -32,11 +32,11 @@ Repeat from step 5 for every dataset, individual .tifs can be merged in the same
 
 12.a Your map is now ready to be printed. Go to raster > DEMto3D this opens your 3d printing menu.
 	
-12.b Make sure your files are selected under "layer to print"
+12.b Make sure your file is selected under "layer to print"
 
 12.c Under "print extent" you can either select the whole map using the leftmost box in the group of 3 or you can drag to select an area using the rightmost. Selecting a large area will take a while, do not touch the program while it is selecting.
 
-12.d Select a desired resolution under "spacing", note that decreasing this value (i.e from 0.2 > 0.1) increases the resolution and filesize eightfold. Values in the range of 0.5-0.2 are good for large areas or strictly terrain-based prints. 0.2-0.1 works well for urban areas. Going below 0.05 causes extreme exponential filesize growth making stl files useless in most applications.
+12.d Select a desired resolution under "spacing", note that changing this value affects the output exponentially. Reducing from 0.2 > 0.1 (factor of 2) increases the resolution and filesize eightfold. Values in the range of 0.5-0.2 are good for large areas or strictly terrain-based prints. 0.2-0.1 works well for urban areas. Going below 0.05 causes extreme exponential filesize growth making stl files useless in most applications.
 
 12.e Select desired size or scale.
 
